@@ -13,7 +13,7 @@ The most important files it contains are the following:
 
 Important Notes:
 - There is a detailed description of the [code structure](#code-structure) below, including a description of which parts you will need to implement. 
-- The only allowed external library is `numpy` and `pytorch`, no other external libraries are allowed.
+- The only allowed external library is `numpy` and `pytorch`, no other external libraries are allowed. As the datasets are small, a DAN model with a similar size in their origial paper can be trained within a few minutes (<30 minutes) using CPU, while it's also encouraged to train more advanced models that may require GPU. Please check available resources such as [CHTC](https://chtc.cs.wisc.edu/) or [Google's Colab](https://colab.research.google.com/).
 - We will run your code with the following commands (i.e., `run_exp.sh`) using both the original `main.py` and your updated `model.py` if you make any modifications there. Because of this, make sure that whichever setting you think is best is reproducible using exactly these commands (where you replace `CAMPUSID` with your 10-digit campus ID):
     - `CAMPUSID="9xx1234567"`
     - `mkdir -p CAMPUSID`
