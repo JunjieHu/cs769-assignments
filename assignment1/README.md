@@ -7,7 +7,7 @@ The most important files it contains are the following:
 1. **model.py:** This is what you'll need to implement. It implements a very basic version of a neural network model using [PyTorch](https://github.com/pytorch/pytorch). Some code is provided, but important functionality is not included. Please implement [Deep Averaging Network](https://www.aclweb.org/anthology/P15-1162.pdf) for text classification. You can feel free to make any modifications to make it a better model. *However,* the original version of `DanModel` will also be tested and results will be used in grading, so the original `DanModel` must also run with your `model.py` implementation.
 2. **main.py:** training code for text classification task.
 3. **setup.py:** this is blank, but if your classifier implementation needs to do some sort of data downloading (e.g. of pre-trained word embeddings) you can implement this here. It will be run before running your implementation of model.py.
-4. **data/:** Two datasets, one from the Stanford Sentiment Treebank with tree info removed and another from IMDb reviews.
+4. **data/:** Two datasets, one from the Stanford Sentiment Treebank with tree info removed and another from IMDb reviews. **The labels in cfimdb-test.txt are replaced by 0** for blind testing and grading.
 
 ## Assignment Details
 
@@ -22,7 +22,7 @@ Important Notes:
 - Please remember to set your default hyper-parameter settings in your own `run_exp.sh` since we will also run your experiment by `bash run_exp.sh` (without extra arguments).
 - Reference accuracies: If you implement things exactly in our way and use the default hyper-parameters and use the same environment (python 3.8 + numpy 1.21.1 + pytorch 1.10.2), you may get the accuracies of dev=0.3951, test=0.4122, and on cfimdb dev=0.9224.
 
-The submission file should be a zip file with the following structure (assuming the andrew id is `CAMPUSID`):
+The submission file should be a zip file with the following structure (assuming the campus id is `CAMPUSID`):
 
 - CAMPUSID/
 - CAMPUSID/main.py `# completed main.py (i.e., `pad_sentences` function)`
