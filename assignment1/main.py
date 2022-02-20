@@ -108,6 +108,7 @@ def evaluate(dataset, model, device, tag_vocab=None, filename=None):
     """
     Evaluate test/dev set
     """
+    model.eval()
     predicts = []
     acc = 0
     for words, tag in dataset:
@@ -124,6 +125,7 @@ def evaluate(dataset, model, device, tag_vocab=None, filename=None):
                 tag = tag_vocab.id2word[y_pred]
                 f.write(f'{tag}\n')
         print(f'  -Save predictions to {filename}')
+    model.train()
     return acc/len(predicts)
 
 def main():
