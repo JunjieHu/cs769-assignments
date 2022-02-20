@@ -121,7 +121,7 @@ def evaluate(dataset, model, device, tag_vocab=None, filename=None):
         with open(filename, 'w') as f:
             for y_pred in predicts:
                 # convert tag_id to its original label
-                tag = tag_vocab.i2w[y_pred]
+                tag = tag_vocab.id2word[y_pred]
                 f.write(f'{tag}\n')
         print(f'  -Save predictions to {filename}')
     return acc/len(predicts)
