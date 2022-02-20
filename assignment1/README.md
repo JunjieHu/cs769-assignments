@@ -36,14 +36,14 @@ The submission file should be a zip file with the following structure (assuming 
 - CAMPUSID/report.pdf `# (optional), report. here you can describe anything particularly new or interesting that you did`
 
 Grading information:
-- **A+:** Submissions that implement something new and achieve particularly large accuracy improvements (for SST, this would be on the order of 2\% over the baseline, but you must also achieve gains on IMDB)
-- **A:** You additionally implement something else on top of the missing pieces, some examples include:
+- **100:** Submissions that implement something new and achieve particularly large accuracy improvements (for SST, this would be on the order of 2\% over the baseline, but you must also achieve gains on IMDB)
+- **95:** You additionally implement something else on top of the missing pieces, some examples include:
     - Changing the training procedure such as mini-batching, optimizer, early-stop, learning rate scheduling.
     - Incorporating pre-trained word embeddings, such as those from [fasttext](https://fasttext.cc/) or [GloVe](https://nlp.stanford.edu/projects/glove/)
     - Changing the model architecture significantly
-- **A-:** You implement all the missing pieces and the original `model.py` code achieves comparable accuracy to our reference implementation (about 41% on SST)
-- **B+:** All missing pieces are implemented, but accuracy is not comparable to the reference.
-- **B or below:** Some parts of the missing pieces are not implemented.
+- **90:** You implement all the missing pieces and the original `model.py` code achieves comparable accuracy to our reference implementation (about 40% on SST)
+- **85:** All missing pieces are implemented, but accuracy is not comparable to the reference.
+- **80 or below:** Some parts of the missing pieces are not implemented.
 
 Tools:
 - `prepare_submit.py` can help to create(1) or check(2) the to-be-submitted zip file. It will throw assertion errors if the format is not expected, and we will *not accept submissions that fail this check*. Usage: (1) To create and check a zip file with your outputs, run `python3 prepare_submit.py path/to/your/output/dir CAMPUSID`, (2) To check your zip file, run `python3 prepare_submit.py path/to/your/submit/zip/file.zip CAMPUSID`
