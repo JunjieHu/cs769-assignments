@@ -50,7 +50,7 @@ class DanModel(BaseModel):
 
         # Use pre-trained word embeddings if emb_file exists
         if args.emb_file is not None:
-            self.load_word_embedding()
+            self.copy_embedding_from_numpy()
 
     def define_model_parameters():
         """
