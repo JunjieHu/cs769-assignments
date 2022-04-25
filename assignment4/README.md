@@ -39,6 +39,7 @@ The grading breakdown for the code is as follows:
 - 80: Many key experiment scripts are missing. It's not easiy to reproduce the experiments. Instructions are missing. Only one member contributes to the repository.
 
 Each team will have 8mins for the presentation (6mins talk & 2mins QA). The grading breakdown for the presentation is as follows:
+Please sign up the presentation slots using this [link](https://docs.google.com/spreadsheets/d/1tBFH2NJc_0FpMrtg1iYR4VX9OB9fvQ_zI4GmURAiovw/edit?usp=sharing). 
 - 15% for the clear description about the task, and the motivation of your work.
 - 25% for the concise summary of the existing works.
 - 25% for the clear description of proposed method (with animation if possible).
