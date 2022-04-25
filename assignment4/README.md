@@ -1,7 +1,7 @@
 # Assignment 4 (Course project)
 
 ## Logistics
-The class project will be carried out in groups of 2 or 3 people. Please actively search your teammate either posting a note on piazza or chatting after class. We encourage everyone to submit your interested topics to the [survey link](https://canvas.wisc.edu/courses/292771/quizzes/350566) on Canvas. The deadline of Assignment 3 is 5/6 11:59PM. Every team has 3 late days in total for Assignment 3 and 4.
+The class project will be carried out in groups of 2 or 3 people. Please actively search your teammate either posting a note on piazza or chatting after class. The deadline of Assignment 3 is 5/6 11:59PM. Every team has 3 late days in total for Assignment 3 and 4.
 
 ## Submission Information
 In **Homework Assignment 4**, you should also turn in a report that provides an overview of your idea and also contains a brief survey of related work on the topic. Please submit the following the report to [Canvas](https://canvas.wisc.edu/courses/292771/assignments).
