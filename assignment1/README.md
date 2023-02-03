@@ -34,6 +34,7 @@ The submission file should be a zip file with the following structure (assuming 
 - CAMPUSID/cfimdb-dev-output.txt `# output of the dev set for CFIMDB data`
 - CAMPUSID/cfimdb-test-output.txt `# output of the test set for CFIMDB data`
 - CAMPUSID/report.pdf `# (optional), report. here you can describe anything particularly new or interesting that you did`
+- CAMPUSID/README `# (optional) only if you use pre-trained word vectors such as GloVE and FastText. Do not upload the word embedding file. Instead, mention in the README with a download link to the word embedding file that you use for "--emb_file" in main.py.`
 
 Grading information:
 - **100:** Submissions that implement something new and achieve particularly large accuracy improvements (for SST, this would be on the order of 2\% over the baseline, but you must also achieve gains on IMDB)

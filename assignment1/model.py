@@ -52,21 +52,24 @@ class DanModel(BaseModel):
         if args.emb_file is not None:
             self.copy_embedding_from_numpy()
 
-    def define_model_parameters():
+    def define_model_parameters(self):
         """
         Define the model's parameters, e.g., embedding layer, feedforward layer.
+        Pass hyperparameters explicitly or use self.args to access the hyperparameters.
         """
         raise NotImplementedError()
 
     def init_model_parameters(self):
         """
         Initialize the model's parameters by uniform sampling from a range [-v, v], e.g., v=0.08
+        Pass hyperparameters explicitly or use self.args to access the hyperparameters.
         """
         raise NotImplementedError()
 
-    def copy_embedding_from_numpy():
+    def copy_embedding_from_numpy(self):
         """
         Load pre-trained word embeddings from numpy.array to nn.embedding
+        Pass hyperparameters explicitly or use self.args to access the hyperparameters.
         """
         raise NotImplementedError()
 

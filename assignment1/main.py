@@ -83,7 +83,7 @@ def pad_sentences(sents, pad_id):
 
 def compute_grad_norm(model, norm_type=2):
     """
-    Computer the gradients' L2 norm
+    Compute the gradients' L2 norm
     """
     total_norm = 0.0
     for name, p in model.named_parameters():
@@ -96,7 +96,7 @@ def compute_grad_norm(model, norm_type=2):
 
 def compute_param_norm(model, norm_type=2):
     """
-    Computer the model's parameters' L2 norm
+    Compute the model's parameters' L2 norm
     """
     total_norm = 0.0
     for p in model.parameters():
