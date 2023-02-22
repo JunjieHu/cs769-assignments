@@ -84,9 +84,10 @@ class BertLayer(nn.Module):
   def add_norm(self, input, output, dense_layer, dropout, ln_layer):
     """
     input: the input
-    output: the input that requires the sublayer to transform
-    dense_layer, dropput: the sublayer
-    ln_layer: layer norm that takes input+sublayer(output)
+    output: the input that requires the Sublayer to transform
+    dense_layer, dropput: the Sublayer
+    ln_layer: layer norm that takes input+sublayer(output) 
+    This function computes ``LayerNorm(input + Sublayer(output))``, where sublayer is a dense_layer followed by dropout.
     """
     # todo
     raise NotImplementedError

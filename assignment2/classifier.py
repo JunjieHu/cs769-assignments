@@ -267,6 +267,7 @@ def get_args():
     parser.add_argument("--use_gpu", action='store_true')
     parser.add_argument("--dev_out", type=str, default="cfimdb-dev-output.txt")
     parser.add_argument("--test_out", type=str, default="cfimdb-test-output.txt")
+    parser.add_argument("--filepath", type=str, default=None)
 
     # hyper parameters
     parser.add_argument("--batch_size", help='sst: 64, cfimdb: 8 can fit a 12GB GPU', type=int, default=8)
@@ -280,7 +281,8 @@ def get_args():
 
 if __name__ == "__main__":
     args = get_args()
-    args.filepath = f'{args.option}-{args.epochs}-{args.lr}.pt' # save path
+    if args.filepath is None:
+        args.filepath = f'{args.option}-{args.epochs}-{args.lr}.pt' # save path
     seed_everything(args.seed)  # fix the seed for reproducibility
     train(args)
     test(args)

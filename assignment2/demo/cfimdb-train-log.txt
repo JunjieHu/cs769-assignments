@@ -1,0 +1,20 @@
+args: {'train': 'data/cfimdb-train.txt', 'dev': 'data/cfimdb-dev.txt', 'test': 'data/cfimdb-test.txt', 'seed': 1234, 'epochs': 10, 'option': 'finetune', 'use_gpu': True, 'dev_out': 'cfimdb-dev-output.txt', 'test_out': 'cfimdb-test-output.txt', 'batch_size': 8, 'hidden_dropout_prob': 0.3, 'lr': 1e-05}
+load 1707 data from data/cfimdb-train.txt
+load 245 data from data/cfimdb-dev.txt
+save the model to finetune-10-1e-05.pt
+epoch 0: train loss :: 0.441, train acc :: 0.979, dev acc :: 0.951
+save the model to finetune-10-1e-05.pt
+epoch 1: train loss :: 0.084, train acc :: 0.984, dev acc :: 0.959
+epoch 2: train loss :: 0.052, train acc :: 0.995, dev acc :: 0.951
+epoch 3: train loss :: 0.044, train acc :: 0.994, dev acc :: 0.943
+epoch 4: train loss :: 0.025, train acc :: 0.989, dev acc :: 0.947
+epoch 5: train loss :: 0.020, train acc :: 0.998, dev acc :: 0.959
+epoch 6: train loss :: 0.014, train acc :: 0.998, dev acc :: 0.951
+epoch 7: train loss :: 0.011, train acc :: 0.999, dev acc :: 0.959
+epoch 8: train loss :: 0.006, train acc :: 0.995, dev acc :: 0.943
+epoch 9: train loss :: 0.010, train acc :: 1.000, dev acc :: 0.955
+load model from finetune-10-1e-05.pt
+load 245 data from data/cfimdb-dev.txt
+load 488 data from data/cfimdb-test.txt
+dev acc :: 0.959
+test acc :: 0.486

@@ -51,8 +51,11 @@ CAMPUSID/
 ├── sanity_check.data
 ├── sst-dev-output.txt 
 ├── sst-test-output.txt 
+├── sst-train-log.txt 
 ├── cfimdb-dev-output.txt 
 ├── cfimdb-test-output.txt 
+├── cfimdb-train-log.txt 
+├── run_exp.sh 
 └── setup.py
 ```
 
