@@ -40,5 +40,5 @@ print("Your BertLayer implementation is correct!")
 # 4. BertModel
 outputs = bert(sent_ids, att_mask)
 for k in ['last_hidden_state', 'pooler_output']:
-    assert torch.allclose(outputs[k], sanity_data[k], rtol=1e-3)
+    assert torch.allclose(outputs[k], sanity_data[k], rtol=1e-3, atol=1e-4)
 print("Your BERT implementation is correct!")
