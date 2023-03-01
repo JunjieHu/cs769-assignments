@@ -8,7 +8,7 @@ mkdir -p $CAMPUSID
 # Step 2. Train models on two datasets.
 ##  2.1. Run experiments on SST
 PREF='sst'
-python main.py \
+python classifier.py \
     --use_gpu \
     --option finetune \
     --lr 1e-5 \
@@ -22,7 +22,7 @@ python main.py \
 
 ##  2.2 Run experiments on CF-IMDB
 PREF='cfimdb'
-python main.py \
+python classifier.py \
     --use_gpu \
     --option finetune \
     --lr 1e-5 \
