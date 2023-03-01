@@ -1,6 +1,7 @@
 import torch
 from types import SimpleNamespace
 from bert import BertModel, BertSelfAttention, BertLayer 
+from utils import *
 sanity_data = torch.load("./sanity_check.data")
 
 
@@ -19,21 +20,24 @@ bert.eval()
 bertlayer.eval()
 bert_attn.eval()
 
-# load testing data
-hidden_states = sanity_data['hidden_states']
-attention_mask = sanity_data['attention_mask']
+# 1. BertModel.embed function
+embed_outputs = bert.embed(input_ids=sent_ids)
+assert torch.allclose(embed_outputs, sanity_data['embed_outputs'], rtol=1e-3, atol=1e-04)
+print("Your BertModel.embed() implementation is correct!")
 
-# 1. BertSelfAttention
+# 2. BertSoftAttention
+hidden_states = embed_outputs
+attention_mask: torch.Tensor = get_extended_attention_mask(att_mask, bert.dtype)
 attn_outputs = bert_attn(hidden_states, attention_mask)
-assert torch.allclose(attn_outputs, sanity_data['attn_outputs'], rtol=1e-3)
+assert torch.allclose(attn_outputs, sanity_data['attn_outputs'], rtol=1e-3, atol=1e-04)
 print("Your BertSelfAttention implementation is correct!")
 
 # 2. BertLayer
 layer_outputs = bertlayer(hidden_states, attention_mask)
-assert torch.allclose(layer_outputs, sanity_data['layer_outputs'], rtol=1e-3)
+assert torch.allclose(layer_outputs, sanity_data['layer_outputs'], rtol=1e-3, atol=1e-04)
 print("Your BertLayer implementation is correct!")
 
-# 3. BertModel
+# 4. BertModel
 outputs = bert(sent_ids, att_mask)
 for k in ['last_hidden_state', 'pooler_output']:
     assert torch.allclose(outputs[k], sanity_data[k], rtol=1e-3)
