@@ -29,7 +29,7 @@ The grading breakdown for the proposal is as follows:
 - 15% for plan of activities
 - 10% for quality of writing
 
-# Expectation of Re-implementation
+## Expectation of Re-implementation
 You should pick one recent paper (ideally within the past three years) after conducting the literature survey. In the experiment section, please provide a table containing the original scores reported in your selected paper and the scores of your re-implemented models. You're allowed to use any libraries for the implementation. 
 - If you plan to re-implement the selected paper without reusing any existing code base, please follow the detailed instructions in their paper by strictly following their model architecture and hyperparameters. Your reimplementation scores should not be too far away from the scores reported in their paper (e.g., within 2-5 accuracy points, depending on the difficulty of tasks and metrics).
 - If you plan to re-use their code base for more ambitious research problems (e.g., new challenges unexplored in the literature), you should **propose a few extensions** on top of their method and perform a detailed comparison with their original model's output in the experimental section. **Simply re-running the existing code base is not sufficient**. The extensions will be regarded as exploring potential ideas and preliminary results for HW5. Please also **clearly specify which parts are implemented by yourself** in the report. 
