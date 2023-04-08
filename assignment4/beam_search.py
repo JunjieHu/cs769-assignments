@@ -66,8 +66,8 @@ def beam_search(model, src_hiddens, beam_size=5, decode_max_length=10, to_word=T
         top_wordids.append(top_wordid)    # select the word id
         
         # Re-arrange the decoder hidden states, which also results in re-arrangement of next-word log-probability
-        dec_hidden = select_hiddens_by_beams(dec_hidden, top_beamid)  # [batch*beam_size, hidden_size]
-        dec_input = top_wordid #.view(-1)  # [batch_size * beam_size]
+        dec_hidden = select_hiddens_by_beams(dec_hidden, top_beamid)  # [batch, beam_size, hidden_size]
+        dec_input = top_wordid  # [batch_size, beam_size]
         model.log_prob = select_hiddens_by_beams(model.log_prob, top_beamid)
 
         eos_mask = eos_mask.gather(dim=1, index=top_beamid) | top_wordid.eq(eos_id)
