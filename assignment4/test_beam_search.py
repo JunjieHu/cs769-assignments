@@ -53,8 +53,15 @@ def test_extract_sequences():
     
 
 def test_topK():
-    score = torch.FloatTensor([[[-0.1, -0.4, -0.5, -0.6], [-0.4, -0.8, -0.4, -0.3], [-0.9, -0.5, -0.2, -0.7]],
-                [[-0.6, -0.3, -0.8, -0.9], [-0.9, -0.5, -0.7, -0.4], [-0.7, -0.8, -0.2, -0.8]]])
+    # score: [batch_size, beam_size, vocab_size]
+    score = torch.FloatTensor(
+        [[[-0.1, -0.4, -0.5, -0.6], 
+          [-0.4, -0.8, -0.4, -0.3], 
+          [-0.9, -0.5, -0.2, -0.7]
+         ],
+         [[-0.6, -0.3, -0.8, -0.9], 
+          [-0.9, -0.5, -0.7, -0.4], 
+          [-0.7, -0.8, -0.2, -0.8]]])
     top_score = torch.FloatTensor([[-0.1, -0.2, -0.3], [-0.2, -0.3, -0.4]])
     top_beamid = torch.LongTensor([[0, 2, 1], [2, 0, 1]])
     top_wordid = torch.LongTensor([[0, 2, 3], [2, 1, 3]])
