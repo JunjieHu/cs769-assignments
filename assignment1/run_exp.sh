@@ -3,7 +3,8 @@ CAMPUSID='9xx1234567'
 mkdir -p $CAMPUSID
 
 # Step 1. (Optional) Any preprocessing step, e.g., downloading pre-trained word embeddings
-
+wget https://nlp.stanford.edu/data/glove.6B.zip
+unzip glove.6B.zip
 
 # Step 2. Train models on two datasets.
 ##  2.1. Run experiments on SST
